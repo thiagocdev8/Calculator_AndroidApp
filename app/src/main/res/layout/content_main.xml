@@ -19,6 +19,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="8"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="1"
             app:layout_row="1" />
 
@@ -27,6 +28,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="1"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="0"
             app:layout_row="3" />
 
@@ -35,6 +37,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="2"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="1"
             app:layout_row="3" />
 
@@ -43,6 +46,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="3"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="2"
             app:layout_row="3" />
 
@@ -51,6 +55,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="+"
+            android:backgroundTint="@color/operatorColor"
             app:layout_column="3"
             app:layout_row="3" />
 
@@ -58,23 +63,17 @@
             android:id="@+id/button17"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="Button"
+            android:text="0"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="0"
-            app:layout_row="4" />
-
-        <Button
-            android:id="@+id/button18"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Button"
-            app:layout_column="1"
             app:layout_row="4" />
 
         <Button
             android:id="@+id/button19"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="Button"
+            android:text="."
+            android:backgroundTint="@color/pointColor"
             app:layout_column="2"
             app:layout_row="4" />
 
@@ -83,6 +82,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="="
+            android:backgroundTint="@color/operatorColor"
             app:layout_column="3"
             app:layout_row="4" />
 
@@ -91,6 +91,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="5"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="1"
             app:layout_row="2" />
 
@@ -99,6 +100,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="4"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="0"
             app:layout_row="2" />
 
@@ -107,6 +109,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="X"
+            android:backgroundTint="@color/operatorColor"
             app:layout_column="3"
             app:layout_row="1" />
 
@@ -115,6 +118,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="9"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="2"
             app:layout_row="1" />
 
@@ -123,6 +127,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="6"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="2"
             app:layout_row="2" />
 
@@ -131,6 +136,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="-"
+            android:backgroundTint="@color/operatorColor"
             app:layout_column="3"
             app:layout_row="2" />
 
@@ -139,6 +145,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="7"
+            android:backgroundTint="@color/numbersColor"
             app:layout_column="0"
             app:layout_row="1" />
 
@@ -147,30 +154,16 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="/"
+            android:backgroundTint="@color/operatorColor"
             app:layout_column="3"
-            app:layout_row="0" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Button"
-            app:layout_column="2"
-            app:layout_row="0" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Button"
-            app:layout_column="1"
             app:layout_row="0" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="Button"
+            android:text="C"
+            android:backgroundTint="@color/clearColor"
             app:layout_column="0"
             app:layout_row="0" />
     </androidx.gridlayout.widget.GridLayout>
