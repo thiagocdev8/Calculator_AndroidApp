@@ -55,7 +55,39 @@ public class MainActivity extends AppCompatActivity {
         else{
             String num;
             num = ((Button)view).getText().toString();
-            getKeyboard(numb);
+            getKeyboard(num);
         }
+    }
+
+    public void calculate(String operationType){
+        numeroA = Float.parseFloat(textResultado.getText().toString());
+        operacao = operationType;
+        textResultado.setText("0");
+    }
+
+    public void getKeyboard(String str){
+
+        String ScrCurrent = textResultado.getText().toString();
+        ScrCurrent += str;
+        textResultado.setText(ScrCurrent);
+    }
+
+    public void calculateResult(){
+        float numberB = Integer.parseInt(textResultado.getText().toString());
+        float result = 0;
+
+        if(operacao.equals("+")){
+            result = numberB + numeroA;
+        }
+        if(operacao.equals("-")){
+            result = numberB - numeroA;
+        }
+        if(operacao.equals("*")){
+            result = numberB * numeroA;
+        }
+        if(operacao.equals("/")){
+            result = numberB / numeroA;
+        }
+        textResultado.setText(String.valueOf(result));
     }
 }
