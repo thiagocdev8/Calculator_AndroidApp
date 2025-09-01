@@ -26,9 +26,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.content_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.content_main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         textResultado = findViewById(R.id.text_Resultado);
-        buttonClear = findViewById(R.id.buttonClear);
+
+
     }
 
     public void buttonClick(View view){
@@ -37,24 +43,23 @@ public class MainActivity extends AppCompatActivity {
             numeroA=0;
             operacao="";
         }
-        if(view.getId() == R.id.buttonAdd){
+        else if(view.getId() == R.id.buttonAdd){
             calculate("+");
         }
-        if(view.getId() == R.id.buttonSubtract){
+        else if(view.getId() == R.id.buttonSubtract){
             calculate("-");
         }
-        if(view.getId() == R.id.buttonMultiply){
+        else if(view.getId() == R.id.buttonMultiply){
             calculate("*");
         }
-        if(view.getId() == R.id.buttonDivide){
+        else if(view.getId() == R.id.buttonDivide){
             calculate("/");
         }
-        if(view.getId() == R.id.buttonEqual){
+        else if(view.getId() == R.id.buttonEqual){
             calculateResult();
         }
         else{
-            String num;
-            num = ((Button)view).getText().toString();
+            String num = ((Button)view).getText().toString();
             getKeyboard(num);
         }
     }
@@ -67,26 +72,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void getKeyboard(String str){
 
-        String ScrCurrent = textResultado.getText().toString();
-        ScrCurrent += str;
-        textResultado.setText(ScrCurrent);
-    }
+        String scrCurrent = textResultado.getText().toString();
+        if (scrCurrent.equals("0")) {
+            scrCurrent = "";
+        }
+        scrCurrent += str;
+        textResultado.setText(scrCurrent);
 
+    }
     public void calculateResult(){
         float numberB = Integer.parseInt(textResultado.getText().toString());
         float result = 0;
 
         if(operacao.equals("+")){
-            result = numberB + numeroA;
+            result = numeroA + numberB;
         }
         if(operacao.equals("-")){
-            result = numberB - numeroA;
+            result = numeroA - numberB;
         }
         if(operacao.equals("*")){
-            result = numberB * numeroA;
+            result = numeroA * numberB;
         }
         if(operacao.equals("/")){
-            result = numberB / numeroA;
+            result = numeroA / numberB;
         }
         textResultado.setText(String.valueOf(result));
     }
